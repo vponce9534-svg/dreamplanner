@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DreamPlanner | Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="index">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  
+<header class="header">
+  <nav class="nav container" aria-label="Barra principal">
+    <a href="index.html" class="logo" style="text-decoration:none;color:var(--primaryText)"><strong>🌈 DreamPlanner</strong></a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="login.html" >Login</a>
+      <a href="dashboard.html" data-protected-link >Dashboard</a>
+      <button class="btn" type="button" data-theme-toggle aria-pressed="false">Tema</button>
+    </div>
+  </nav>
+</header>
+
+  <main id="main" class="container" tabindex="-1">
+    
+<section class="hero" aria-label="Presentación">
+  <h1>Organiza tus sueños de forma accesible</h1>
+  <p class="help">Prototipo front-end (sin backend) enfocado en WCAG 2.2: contraste, teclado, foco visible y formularios claros.</p>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+    <a class="btn btn-primary" href="login.html">Comenzar (Login)</a>
+    <a class="btn" href="about.html">Ver guía</a>
+  </div>
+<p class="help"><strong>Nota:</strong> Debes iniciar sesión para acceder a Dashboard, Metas, Progreso y Ajustes.</p>
+</section>
+
+<section class="grid" style="margin-top:16px" aria-label="Accesos rápidos">
+  <section class="card">
+    <h2>Secciones principales</h2>
+    <div class="cards" role="list">
+      <a class="tile" data-protected-link role="listitem" href="dashboard.html" data-protected-link>📊 Dashboard<small>Panel principal con accesos</small></a>
+      <a class="tile" data-protected-link role="listitem" href="goals.html" data-protected-link>🎯 Metas<small>Listado y detalles (prototipo)</small></a>
+      <a class="tile" data-protected-link role="listitem" href="progress.html" data-protected-link>📈 Progreso<small>Resumen de avance</small></a>
+      <a class="tile" data-protected-link role="listitem" href="settings.html" data-protected-link>⚙️ Ajustes<small>Preferencias y accesibilidad</small></a>
+    </div>
+  </section>
+
+  <aside class="card" aria-label="Accesibilidad">
+    <h2>Atajos de accesibilidad</h2>
+    <ul>
+      <li><strong>Tab</strong> para navegar y ver foco visible.</li>
+      <li><strong>Enter</strong> para activar botones/enlaces.</li>
+      <li>Botón <strong>Tema</strong> para modo claro/oscuro.</li>
+      <li>En formularios verás mensajes claros de error.</li>
+    </ul>
+    <p class="help">Tip: usa el enlace “Saltar al contenido” para evitar navegar por la barra.</p>
+  </aside>
+</section>
+
+  </main>
+  <footer class="footer"><small>Prototipo académico · WCAG 2.2 · Navegable con teclado</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>

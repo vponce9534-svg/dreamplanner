@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DreamPlanner | Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="dashboard">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  
+<header class="header">
+  <nav class="nav container" aria-label="Barra principal">
+    <a href="index.html" class="logo" style="text-decoration:none;color:var(--primaryText)"><strong>🌈 DreamPlanner</strong></a>
+    <div class="nav-links">
+      <a href="index.html" >Inicio</a>
+      <a href="login.html" >Login</a>
+      <a href="dashboard.html" data-protected-link aria-current="page">Dashboard</a>
+      <button class="btn" type="button" data-theme-toggle aria-pressed="false">Tema</button>
+    </div>
+  </nav>
+</header>
+
+  <main id="main" class="container" tabindex="-1">
+    
+<h1>Dashboard</h1>
+<p class="help">Bienvenido, <strong>Admin</strong>. Usa los botones para navegar entre vistas del prototipo.</p>
+
+<section class="cards" aria-label="Acciones rápidas">
+  <a class="tile" data-protected-link href="new-goal.html" data-protected-link>➕ Nueva meta<small>Formulario con validación</small></a>
+  <a class="tile" data-protected-link href="goals.html" data-protected-link>🎯 Ver metas<small>Listado con estados</small></a>
+  <a class="tile" data-protected-link href="progress.html" data-protected-link>📈 Ver progreso<small>Resumen visual</small></a>
+  <a class="tile" data-protected-link href="settings.html" data-protected-link>⚙️ Ajustes<small>Tema y preferencias</small></a>
+</section>
+
+<section class="card" style="margin-top:14px" aria-label="Metas destacadas">
+  <h2>Metas destacadas</h2>
+  <ul class="list">
+    <li class="item"><div><strong>📚 Estudiar 30 min</strong><div class="help">Todos los días</div></div><span class="badge">Activa</span></li>
+    <li class="item"><div><strong>💰 Ahorrar $100</strong><div class="help">Meta mensual</div></div><span class="badge">En progreso</span></li>
+    <li class="item"><div><strong>🏃 Caminar 3x</strong><div class="help">Por semana</div></div><span class="badge">Pendiente</span></li>
+  </ul>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+    <button class="btn" type="button" data-logout>Salir</button>
+    <a class="btn btn-primary" href="goals.html" data-protected-link>Ir a metas</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer"><small>Prototipo académico · WCAG 2.2 · Navegable con teclado</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>

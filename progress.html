@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DreamPlanner | Progreso</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="progress">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  
+<header class="header">
+  <nav class="nav container" aria-label="Barra principal">
+    <a href="index.html" class="logo" style="text-decoration:none;color:var(--primaryText)"><strong>🌈 DreamPlanner</strong></a>
+    <div class="nav-links">
+      <a href="index.html" >Inicio</a>
+      <a href="login.html" >Login</a>
+      <a href="dashboard.html" data-protected-link >Dashboard</a>
+      <button class="btn" type="button" data-theme-toggle aria-pressed="false">Tema</button>
+      <button class="btn" type="button" data-logout>Salir</button>
+    </div>
+  </nav>
+</header>
+
+  <main id="main" class="container" tabindex="-1">
+    
+<h1>Progreso</h1>
+<p class="help">Resumen del avance (simulado). La información es clara y con buen contraste.</p>
+
+<section class="grid" aria-label="Resumen de progreso">
+  <section class="card">
+    <h2>Resumen</h2>
+    <ul>
+      <li><strong>Metas activas:</strong> 2</li>
+      <li><strong>En progreso:</strong> 1</li>
+      <li><strong>Pendientes:</strong> 1</li>
+    </ul>
+    <p class="help">En un sistema real, aquí podrían mostrarse gráficas accesibles con texto equivalente.</p>
+  </section>
+
+  <aside class="card" aria-label="Consejos">
+    <h2>Consejo</h2>
+    <p class="help">Divide una meta grande en tareas pequeñas para avanzar más rápido.</p>
+    <a class="btn btn-primary" href="goals.html" data-protected-link>Ver metas</a>
+  </aside>
+</section>
+
+  </main>
+  <footer class="footer"><small>Prototipo académico · WCAG 2.2 · Navegable con teclado</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
