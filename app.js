@@ -158,3 +158,23 @@
     });
   }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const file = (window.location.pathname.split("/").pop() || "").toLowerCase();
+
+  // SOLO en index.html
+  if (file === "" || file === "index.html") {
+    const disabledLinks = document.querySelectorAll(".disabled-link");
+
+    disabledLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+
+      // efecto visual de deshabilitado
+      link.style.pointerEvents = "none";
+      link.style.opacity = "0.5";
+      link.style.cursor = "not-allowed";
+    });
+  }
+});
