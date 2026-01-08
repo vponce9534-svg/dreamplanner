@@ -1,59 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DreamPlanner | Login</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Login | Dream Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root{
+      --primary:#2563eb;
+      --secondary:#9333ea;
+      --bg:#f4f6f8;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--text);
+    }
+
+    .login-card{
+      background:var(--card);
+      padding:36px;
+      border-radius:14px;
+      width:100%;
+      max-width:420px;
+      box-shadow:0 12px 32px rgba(0,0,0,.15);
+    }
+
+    h1{
+      text-align:center;
+      margin-top:0;
+      margin-bottom:8px;
+    }
+
+    p.subtitle{
+      text-align:center;
+      color:var(--muted);
+      margin-bottom:28px;
+      font-size:14px;
+    }
+
+    label{
+      font-weight:600;
+      font-size:14px;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      margin-top:6px;
+      margin-bottom:18px;
+      border-radius:8px;
+      border:1px solid #d1d5db;
+      font-size:14px;
+    }
+
+    input:focus{
+      outline:none;
+      border-color:var(--primary);
+    }
+
+    button{
+      width:100%;
+      padding:14px;
+      background:var(--primary);
+      color:white;
+      border:none;
+      border-radius:10px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:.2s;
+    }
+
+    button:hover{
+      background:#1e40af;
+      transform:translateY(-1px);
+    }
+
+    .back{
+      text-align:center;
+      margin-top:18px;
+      font-size:14px;
+    }
+
+    .back a{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .back a:hover{
+      text-decoration:underline;
+    }
+  </style>
 </head>
-<body data-page="login">
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
-  
-<header class="header">
-  <nav class="nav container" aria-label="Barra principal">
-    <a href="index.html" class="logo" style="text-decoration:none;color:var(--primaryText)"><strong>🌈 DreamPlanner</strong></a>
-    <div class="nav-links">
-      <a href="index.html" >Inicio</a>
-      <a href="login.html" aria-current="page">Login</a>
-      <a href="dashboard.html" data-protected-link >Dashboard</a>
-      <button class="btn" type="button" data-theme-toggle aria-pressed="false">Tema</button>
-    </div>
-  </nav>
-</header>
 
-  <main id="main" class="container" tabindex="-1">
-    
-<h1>Iniciar sesión</h1>
-<p class="help">Credenciales de demostración: <strong>admin@admin.com</strong> / <strong>123456</strong></p>
-<p class="help">Tip: evita espacios al final y revisa mayúsculas/minúsculas.</p>
+<body>
 
-<section class="card" aria-label="Formulario de inicio de sesión">
-  <p id="formStatus" class="help" role="status" aria-live="polite"></p>
+  <div class="login-card">
+    <h1>Iniciar sesión</h1>
+    <p class="subtitle">Accede a tu cuenta de Dream Planner</p>
 
-  <form id="loginForm" novalidate>
-    <div class="field">
-      <label for="email">Correo</label>
-      <input id="email" name="email" type="email" autocomplete="email" aria-describedby="emailHelp emailError">
-      <div id="emailHelp" class="help">Ejemplo: nombre@dominio.com</div>
-      <div id="emailError" class="error" aria-live="polite"></div>
-    </div>
+    <form>
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" placeholder="usuario@correo.com" required>
 
-    <div class="field">
       <label for="password">Contraseña</label>
-      <input id="password" name="password" type="password" autocomplete="current-password" aria-describedby="passHelp passError">
-      <div id="passHelp" class="help">Mínimo 6 caracteres.</div>
-      <div id="passError" class="error" aria-live="polite"></div>
-    </div>
+      <input type="password" id="password" placeholder="••••••••" required>
 
-    <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <button class="btn btn-primary" type="submit">Entrar</button>
-      <a class="btn" href="about.html">¿Cómo funciona?</a>
-    </div>
-  </form>
-</section>
+      <button type="submit">Ingresar</button>
+    </form>
 
-  </main>
-  <footer class="footer"><small>Prototipo académico · WCAG 2.2 · Navegable con teclado</small></footer>
-  <script src="app.js"></script>
+    <div class="back">
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </div>
+
 </body>
 </html>
